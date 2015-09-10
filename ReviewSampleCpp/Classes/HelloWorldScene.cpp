@@ -1,6 +1,26 @@
 #include "HelloWorldScene.h"
 
+#include "cocostudio/CocoStudio.h"
+#include "PluginReview/PluginReview.h"
+
+
 USING_NS_CC;
+
+class PluginReviewListenerCpp: public sdkbox::ReviewListener {
+public:
+    virtual void didDisplayAlert() {
+        CCLOG("reivew dialog show");
+    };
+    virtual void didDeclineToRate() {
+        CCLOG("user decline to rate my app");
+    };
+    virtual void didToRate() {
+        CCLOG("user did rate my app");
+    };
+    virtual void didToRemindLater() {
+        CCLOG("user want be remind later");
+    };
+};
 
 Scene* HelloWorld::createScene()
 {
@@ -33,7 +53,7 @@ bool HelloWorld::init()
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-
+    
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
@@ -47,30 +67,15 @@ bool HelloWorld::init()
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
     
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
     
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    FileUtils::getInstance()->addSearchPath("res/Default/");
+    
+    sdkbox::PluginReview::setListener(new PluginReviewListenerCpp());
+    sdkbox::PluginReview::init();
+    
+    newButtonRate();
+    newButtonIncrease();
     
     return true;
 }
@@ -83,4 +88,35 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
+}
+
+void HelloWorld::newButtonRate() {
+    auto label = Label::createWithTTF("Rate the App", "fonts/arial.ttf", 12.0f);
+    auto btn = new MenuItemLabel();
+    btn->initWithLabel(label, CC_CALLBACK_1(HelloWorld::onRateClicked, this));
+    btn->setPosition(Vec2(200, 200));
+    auto menu = Menu::create(btn, NULL);
+    menu->setPosition(Vec2::ZERO);
+    this->addChild(menu, 1);
+    _btnRate = btn;
+}
+
+void HelloWorld::newButtonIncrease() {
+    auto label = Label::createWithTTF("Insrease User Event", "fonts/arial.ttf", 12.0f);
+    auto btn = new MenuItemLabel();
+    btn->initWithLabel(label, CC_CALLBACK_1(HelloWorld::onIncreaseClicked, this));
+    btn->setPosition(Vec2(200, 150));
+    auto menu = Menu::create(btn, NULL);
+    menu->setPosition(Vec2::ZERO);
+    this->addChild(menu, 1);
+    _btnRate = btn;
+}
+
+
+void HelloWorld::onRateClicked(cocos2d::Ref* pSender) {
+    sdkbox::PluginReview::forceToShowPrompt();
+}
+
+void HelloWorld::onIncreaseClicked(cocos2d::Ref* pSender) {
+    sdkbox::PluginReview::userDidSignificantEvent(false);
 }

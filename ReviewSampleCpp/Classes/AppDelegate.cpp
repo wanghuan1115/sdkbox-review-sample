@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "PluginReview/PluginReview.h"
 
 USING_NS_CC;
 
@@ -35,6 +36,7 @@ static int register_all_packages()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();

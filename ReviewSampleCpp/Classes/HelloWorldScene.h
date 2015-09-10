@@ -2,6 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "cocosGUI.h"
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -15,6 +16,17 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+    
+private:
+    
+    void newButtonRate();
+    void newButtonIncrease();
+    
+    void onRateClicked(cocos2d::Ref* pSender);
+    void onIncreaseClicked(cocos2d::Ref* pSender);
+
+    cocos2d::MenuItemLabel* _btnRate;
+    cocos2d::MenuItemLabel* _btnIncrease;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
