@@ -31,41 +31,41 @@ public:
 		mLuaHandler = 0;
 	}
 
-    void didDisplayAlert() {
+    void onDisplayAlert() {
         LuaStack* stack = LUAENGINE->getLuaStack();
         LuaValueDict dict;
 
-        dict.insert(std::make_pair("event", LuaValue::stringValue("didDisplayAlert")));
+        dict.insert(std::make_pair("event", LuaValue::stringValue("onDisplayAlert")));
 
         stack->pushLuaValueDict(dict);
         stack->executeFunctionByHandler(mLuaHandler, 1);
     }
 
-    void didDeclineToRate() {
+    void onDeclineToRate() {
         LuaStack* stack = LUAENGINE->getLuaStack();
         LuaValueDict dict;
 
-        dict.insert(std::make_pair("event", LuaValue::stringValue("didDeclineToRate")));
+        dict.insert(std::make_pair("event", LuaValue::stringValue("onDeclineToRate")));
 
         stack->pushLuaValueDict(dict);
         stack->executeFunctionByHandler(mLuaHandler, 1);
     }
 
-    void didToRate() {
+    void onRate() {
         LuaStack* stack = LUAENGINE->getLuaStack();
         LuaValueDict dict;
 
-        dict.insert(std::make_pair("event", LuaValue::stringValue("didToRate")));
+        dict.insert(std::make_pair("event", LuaValue::stringValue("onRate")));
 
         stack->pushLuaValueDict(dict);
         stack->executeFunctionByHandler(mLuaHandler, 1);
     }
 
-    void didToRemindLater() {
+    void onRemindLater() {
         LuaStack* stack = LUAENGINE->getLuaStack();
         LuaValueDict dict;
 
-        dict.insert(std::make_pair("event", LuaValue::stringValue("didToRemindLater")));
+        dict.insert(std::make_pair("event", LuaValue::stringValue("onRemindLater")));
 
         stack->pushLuaValueDict(dict);
         stack->executeFunctionByHandler(mLuaHandler, 1);

@@ -18,20 +18,20 @@ public:
         return _JSDelegate;
     }
 
-    void didDisplayAlert() {
-        invokeDelegate("didDisplayAlert", nullptr, 0, 0);
+    void onDisplayAlert() {
+        invokeDelegate("onDisplayAlert", nullptr, 0, 0);
     }
 
-    void didDeclineToRate() {
-        invokeDelegate("didDeclineToRate", nullptr, 0, 0);
+    void onDeclineToRate() {
+        invokeDelegate("onDeclineToRate", nullptr, 0, 0);
     }
 
-    void didToRate() {
-        invokeDelegate("didToRate", nullptr, 0, 0);
+    void onRate() {
+        invokeDelegate("onRate", nullptr, 0, 0);
     }
 
-    void didToRemindLater() {
-        invokeDelegate("didToRemindLater", nullptr, 0, 0);
+    void onRemindLater() {
+        invokeDelegate("onRemindLater", nullptr, 0, 0);
     }
 
 private:

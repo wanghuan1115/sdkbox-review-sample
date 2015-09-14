@@ -18,7 +18,7 @@ function MainScene:onCreate()
         :onClicked(function()
             print("onClicked")
             local plugin = sdkbox.PluginReview
-            plugin:forceToShowPrompt()
+            plugin:show(true)
         end)
         :move(display.cx, display.cy + 50)
     local btnIncreate = cc.MenuItemLabel:create(labelIncrease)
@@ -47,13 +47,13 @@ function MainScene:initSDK()
         local plugin = sdkbox.PluginReview
         plugin:setListener(function(args)
             local event = args.event
-            if "didDisplayAlert" == event then
+            if "onDisplayAlert" == event then
                 print("didDisplayAlert")
-            elseif "didDeclineToRate" == event then
+            elseif "onDeclineToRate" == event then
                 print("didDeclineToRate")
-            elseif "didToRate" == event then
+            elseif "onRate" == event then
                 print("didToRate")
-            elseif "didToRemindLater" == event then
+            elseif "onRemindLater" == event then
                 print("didToRemindLater")
             end
         end)
@@ -73,7 +73,7 @@ function MainScene:invokeFun()
 
     if sdkbox.PluginReview then
         local plugin = sdkbox.PluginReview
-        plugin:forceToShowPrompt()
+        plugin:show(true)
     else
         print "not found plugin"
     end

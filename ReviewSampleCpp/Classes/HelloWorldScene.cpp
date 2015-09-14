@@ -8,16 +8,16 @@ USING_NS_CC;
 
 class PluginReviewListenerCpp: public sdkbox::ReviewListener {
 public:
-    virtual void didDisplayAlert() {
+    virtual void onDisplayAlert() {
         CCLOG("reivew dialog show");
     };
-    virtual void didDeclineToRate() {
+    virtual void onDeclineToRate() {
         CCLOG("user decline to rate my app");
     };
-    virtual void didToRate() {
+    virtual void onRate() {
         CCLOG("user did rate my app");
     };
-    virtual void didToRemindLater() {
+    virtual void onRemindLater() {
         CCLOG("user want be remind later");
     };
 };
@@ -114,7 +114,8 @@ void HelloWorld::newButtonIncrease() {
 
 
 void HelloWorld::onRateClicked(cocos2d::Ref* pSender) {
-    sdkbox::PluginReview::forceToShowPrompt();
+    //force to show
+    sdkbox::PluginReview::show(true);
 }
 
 void HelloWorld::onIncreaseClicked(cocos2d::Ref* pSender) {

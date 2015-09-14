@@ -41,7 +41,7 @@ int lua_PluginReviewLua_PluginReview_userDidSignificantEvent(lua_State* tolua_S)
 #endif
     return 0;
 }
-int lua_PluginReviewLua_PluginReview_setCustomPromptTitle(lua_State* tolua_S)
+int lua_PluginReviewLua_PluginReview_setRateButtonTitle(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -59,25 +59,25 @@ int lua_PluginReviewLua_PluginReview_setCustomPromptTitle(lua_State* tolua_S)
     if (argc == 1)
     {
         std::string arg0;
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setCustomPromptTitle");
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setRateButtonTitle");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setCustomPromptTitle'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setRateButtonTitle'", nullptr);
             return 0;
         }
-        sdkbox::PluginReview::setCustomPromptTitle(arg0);
+        sdkbox::PluginReview::setRateButtonTitle(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setCustomPromptTitle",argc, 1);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setRateButtonTitle",argc, 1);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setCustomPromptTitle'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setRateButtonTitle'.",&tolua_err);
 #endif
     return 0;
 }
-int lua_PluginReviewLua_PluginReview_setCustomPromptCancelButtonTitle(lua_State* tolua_S)
+int lua_PluginReviewLua_PluginReview_show(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -92,28 +92,39 @@ int lua_PluginReviewLua_PluginReview_setCustomPromptCancelButtonTitle(lua_State*
 
     argc = lua_gettop(tolua_S) - 1;
 
-    if (argc == 1)
+    if (argc == 0)
     {
-        std::string arg0;
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setCustomPromptCancelButtonTitle");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setCustomPromptCancelButtonTitle'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_show'", nullptr);
             return 0;
         }
-        sdkbox::PluginReview::setCustomPromptCancelButtonTitle(arg0);
+        sdkbox::PluginReview::show();
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setCustomPromptCancelButtonTitle",argc, 1);
+    if (argc == 1)
+    {
+        bool arg0;
+        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "sdkbox.PluginReview:show");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_show'", nullptr);
+            return 0;
+        }
+        sdkbox::PluginReview::show(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:show",argc, 0);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setCustomPromptCancelButtonTitle'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_show'.",&tolua_err);
 #endif
     return 0;
 }
-int lua_PluginReviewLua_PluginReview_setCustomPromptMessage(lua_State* tolua_S)
+int lua_PluginReviewLua_PluginReview_setTitle(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -131,21 +142,21 @@ int lua_PluginReviewLua_PluginReview_setCustomPromptMessage(lua_State* tolua_S)
     if (argc == 1)
     {
         std::string arg0;
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setCustomPromptMessage");
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setTitle");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setCustomPromptMessage'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setTitle'", nullptr);
             return 0;
         }
-        sdkbox::PluginReview::setCustomPromptMessage(arg0);
+        sdkbox::PluginReview::setTitle(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setCustomPromptMessage",argc, 1);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setTitle",argc, 1);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setCustomPromptMessage'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setTitle'.",&tolua_err);
 #endif
     return 0;
 }
@@ -183,7 +194,7 @@ int lua_PluginReviewLua_PluginReview_init(lua_State* tolua_S)
 #endif
     return 0;
 }
-int lua_PluginReviewLua_PluginReview_setCustomPromptRateLaterButtonTitle(lua_State* tolua_S)
+int lua_PluginReviewLua_PluginReview_setRateLaterButtonTitle(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -201,72 +212,25 @@ int lua_PluginReviewLua_PluginReview_setCustomPromptRateLaterButtonTitle(lua_Sta
     if (argc == 1)
     {
         std::string arg0;
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setCustomPromptRateLaterButtonTitle");
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setRateLaterButtonTitle");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setCustomPromptRateLaterButtonTitle'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setRateLaterButtonTitle'", nullptr);
             return 0;
         }
-        sdkbox::PluginReview::setCustomPromptRateLaterButtonTitle(arg0);
+        sdkbox::PluginReview::setRateLaterButtonTitle(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setCustomPromptRateLaterButtonTitle",argc, 1);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setRateLaterButtonTitle",argc, 1);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setCustomPromptRateLaterButtonTitle'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setRateLaterButtonTitle'.",&tolua_err);
 #endif
     return 0;
 }
-int lua_PluginReviewLua_PluginReview_forceToShowPrompt(lua_State* tolua_S)
-{
-    int argc = 0;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertable(tolua_S,1,"sdkbox.PluginReview",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    argc = lua_gettop(tolua_S) - 1;
-
-    if (argc == 0)
-    {
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_forceToShowPrompt'", nullptr);
-            return 0;
-        }
-        sdkbox::PluginReview::forceToShowPrompt();
-        lua_settop(tolua_S, 1);
-        return 1;
-    }
-    if (argc == 1)
-    {
-        bool arg0;
-        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "sdkbox.PluginReview:forceToShowPrompt");
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_forceToShowPrompt'", nullptr);
-            return 0;
-        }
-        sdkbox::PluginReview::forceToShowPrompt(arg0);
-        lua_settop(tolua_S, 1);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:forceToShowPrompt",argc, 0);
-    return 0;
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_forceToShowPrompt'.",&tolua_err);
-#endif
-    return 0;
-}
-int lua_PluginReviewLua_PluginReview_setCustomPromptRateButtonTitle(lua_State* tolua_S)
+int lua_PluginReviewLua_PluginReview_setMessage(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -284,25 +248,25 @@ int lua_PluginReviewLua_PluginReview_setCustomPromptRateButtonTitle(lua_State* t
     if (argc == 1)
     {
         std::string arg0;
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setCustomPromptRateButtonTitle");
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setMessage");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setCustomPromptRateButtonTitle'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setMessage'", nullptr);
             return 0;
         }
-        sdkbox::PluginReview::setCustomPromptRateButtonTitle(arg0);
+        sdkbox::PluginReview::setMessage(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setCustomPromptRateButtonTitle",argc, 1);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setMessage",argc, 1);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setCustomPromptRateButtonTitle'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setMessage'.",&tolua_err);
 #endif
     return 0;
 }
-int lua_PluginReviewLua_PluginReview_tryToShowPrompt(lua_State* tolua_S)
+int lua_PluginReviewLua_PluginReview_setCancelButtonTitle(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -317,22 +281,24 @@ int lua_PluginReviewLua_PluginReview_tryToShowPrompt(lua_State* tolua_S)
 
     argc = lua_gettop(tolua_S) - 1;
 
-    if (argc == 0)
+    if (argc == 1)
     {
+        std::string arg0;
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "sdkbox.PluginReview:setCancelButtonTitle");
         if(!ok)
         {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_tryToShowPrompt'", nullptr);
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginReviewLua_PluginReview_setCancelButtonTitle'", nullptr);
             return 0;
         }
-        sdkbox::PluginReview::tryToShowPrompt();
+        sdkbox::PluginReview::setCancelButtonTitle(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:tryToShowPrompt",argc, 0);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginReview:setCancelButtonTitle",argc, 1);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_tryToShowPrompt'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginReviewLua_PluginReview_setCancelButtonTitle'.",&tolua_err);
 #endif
     return 0;
 }
@@ -349,14 +315,13 @@ int lua_register_PluginReviewLua_PluginReview(lua_State* tolua_S)
 
     tolua_beginmodule(tolua_S,"PluginReview");
         tolua_function(tolua_S,"userDidSignificantEvent", lua_PluginReviewLua_PluginReview_userDidSignificantEvent);
-        tolua_function(tolua_S,"setCustomPromptTitle", lua_PluginReviewLua_PluginReview_setCustomPromptTitle);
-        tolua_function(tolua_S,"setCustomPromptCancelButtonTitle", lua_PluginReviewLua_PluginReview_setCustomPromptCancelButtonTitle);
-        tolua_function(tolua_S,"setCustomPromptMessage", lua_PluginReviewLua_PluginReview_setCustomPromptMessage);
+        tolua_function(tolua_S,"setRateButtonTitle", lua_PluginReviewLua_PluginReview_setRateButtonTitle);
+        tolua_function(tolua_S,"show", lua_PluginReviewLua_PluginReview_show);
+        tolua_function(tolua_S,"setTitle", lua_PluginReviewLua_PluginReview_setTitle);
         tolua_function(tolua_S,"init", lua_PluginReviewLua_PluginReview_init);
-        tolua_function(tolua_S,"setCustomPromptRateLaterButtonTitle", lua_PluginReviewLua_PluginReview_setCustomPromptRateLaterButtonTitle);
-        tolua_function(tolua_S,"forceToShowPrompt", lua_PluginReviewLua_PluginReview_forceToShowPrompt);
-        tolua_function(tolua_S,"setCustomPromptRateButtonTitle", lua_PluginReviewLua_PluginReview_setCustomPromptRateButtonTitle);
-        tolua_function(tolua_S,"tryToShowPrompt", lua_PluginReviewLua_PluginReview_tryToShowPrompt);
+        tolua_function(tolua_S,"setRateLaterButtonTitle", lua_PluginReviewLua_PluginReview_setRateLaterButtonTitle);
+        tolua_function(tolua_S,"setMessage", lua_PluginReviewLua_PluginReview_setMessage);
+        tolua_function(tolua_S,"setCancelButtonTitle", lua_PluginReviewLua_PluginReview_setCancelButtonTitle);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(sdkbox::PluginReview).name();
     g_luaType[typeName] = "sdkbox.PluginReview";

@@ -137,23 +137,23 @@ JSBool js_PluginReviewJS_PluginReview_userDidSignificantEvent(JSContext *cx, uin
 }
 #endif
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_setCustomPromptTitle(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginReviewJS_PluginReview_setRateButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     bool ok = true;
     if (argc == 1) {
         std::string arg0;
         ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setCustomPromptTitle : Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptTitle(arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setRateButtonTitle : Error processing arguments");
+        sdkbox::PluginReview::setRateButtonTitle(arg0);
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setCustomPromptTitle : wrong number of arguments");
+    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setRateButtonTitle : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_setCustomPromptTitle(JSContext *cx, uint32_t argc, jsval *vp)
+JSBool js_PluginReviewJS_PluginReview_setRateButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     jsval *argv = JS_ARGV(cx, vp);
     JSBool ok = JS_TRUE;
@@ -161,7 +161,7 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptTitle(JSContext *cx, uint32
         std::string arg0;
         ok &= jsval_to_std_string(cx, argv[0], &arg0);
         JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptTitle(arg0);
+        sdkbox::PluginReview::setRateButtonTitle(arg0);
         JS_SET_RVAL(cx, vp, JSVAL_VOID);
         return JS_TRUE;
     }
@@ -170,31 +170,41 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptTitle(JSContext *cx, uint32
 }
 #endif
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginReviewJS_PluginReview_show(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     bool ok = true;
-    if (argc == 1) {
-        std::string arg0;
-        ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle : Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptCancelButtonTitle(arg0);
+    if (argc == 0) {
+        sdkbox::PluginReview::show();
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle : wrong number of arguments");
+    if (argc == 1) {
+        bool arg0;
+        arg0 = JS::ToBoolean(args.get(0));
+        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_show : Error processing arguments");
+        sdkbox::PluginReview::show(arg0);
+        args.rval().setUndefined();
+        return true;
+    }
+    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_show : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
+JSBool js_PluginReviewJS_PluginReview_show(JSContext *cx, uint32_t argc, jsval *vp)
 {
     jsval *argv = JS_ARGV(cx, vp);
     JSBool ok = JS_TRUE;
+    if (argc == 0) {
+        sdkbox::PluginReview::show();
+        JS_SET_RVAL(cx, vp, JSVAL_VOID);
+        return JS_TRUE;
+    }
     if (argc == 1) {
-        std::string arg0;
-        ok &= jsval_to_std_string(cx, argv[0], &arg0);
+        bool arg0;
+        arg0 = JS::ToBoolean(argv[0]);
         JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptCancelButtonTitle(arg0);
+        sdkbox::PluginReview::show(arg0);
         JS_SET_RVAL(cx, vp, JSVAL_VOID);
         return JS_TRUE;
     }
@@ -203,23 +213,23 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle(JSContext
 }
 #endif
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_setCustomPromptMessage(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginReviewJS_PluginReview_setTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     bool ok = true;
     if (argc == 1) {
         std::string arg0;
         ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setCustomPromptMessage : Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptMessage(arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setTitle : Error processing arguments");
+        sdkbox::PluginReview::setTitle(arg0);
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setCustomPromptMessage : wrong number of arguments");
+    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setTitle : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_setCustomPromptMessage(JSContext *cx, uint32_t argc, jsval *vp)
+JSBool js_PluginReviewJS_PluginReview_setTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     jsval *argv = JS_ARGV(cx, vp);
     JSBool ok = JS_TRUE;
@@ -227,7 +237,7 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptMessage(JSContext *cx, uint
         std::string arg0;
         ok &= jsval_to_std_string(cx, argv[0], &arg0);
         JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptMessage(arg0);
+        sdkbox::PluginReview::setTitle(arg0);
         JS_SET_RVAL(cx, vp, JSVAL_VOID);
         return JS_TRUE;
     }
@@ -264,23 +274,23 @@ JSBool js_PluginReviewJS_PluginReview_init(JSContext *cx, uint32_t argc, jsval *
 }
 #endif
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginReviewJS_PluginReview_setRateLaterButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     bool ok = true;
     if (argc == 1) {
         std::string arg0;
         ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle : Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptRateLaterButtonTitle(arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setRateLaterButtonTitle : Error processing arguments");
+        sdkbox::PluginReview::setRateLaterButtonTitle(arg0);
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle : wrong number of arguments");
+    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setRateLaterButtonTitle : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
+JSBool js_PluginReviewJS_PluginReview_setRateLaterButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     jsval *argv = JS_ARGV(cx, vp);
     JSBool ok = JS_TRUE;
@@ -288,7 +298,7 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle(JSCont
         std::string arg0;
         ok &= jsval_to_std_string(cx, argv[0], &arg0);
         JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptRateLaterButtonTitle(arg0);
+        sdkbox::PluginReview::setRateLaterButtonTitle(arg0);
         JS_SET_RVAL(cx, vp, JSVAL_VOID);
         return JS_TRUE;
     }
@@ -297,66 +307,23 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle(JSCont
 }
 #endif
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_forceToShowPrompt(JSContext *cx, uint32_t argc, jsval *vp)
-{
-    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
-    bool ok = true;
-    if (argc == 0) {
-        sdkbox::PluginReview::forceToShowPrompt();
-        args.rval().setUndefined();
-        return true;
-    }
-    if (argc == 1) {
-        bool arg0;
-        arg0 = JS::ToBoolean(args.get(0));
-        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_forceToShowPrompt : Error processing arguments");
-        sdkbox::PluginReview::forceToShowPrompt(arg0);
-        args.rval().setUndefined();
-        return true;
-    }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_forceToShowPrompt : wrong number of arguments");
-    return false;
-}
-#elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_forceToShowPrompt(JSContext *cx, uint32_t argc, jsval *vp)
-{
-    jsval *argv = JS_ARGV(cx, vp);
-    JSBool ok = JS_TRUE;
-    if (argc == 0) {
-        sdkbox::PluginReview::forceToShowPrompt();
-        JS_SET_RVAL(cx, vp, JSVAL_VOID);
-        return JS_TRUE;
-    }
-    if (argc == 1) {
-        bool arg0;
-        arg0 = JS::ToBoolean(argv[0]);
-        JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
-        sdkbox::PluginReview::forceToShowPrompt(arg0);
-        JS_SET_RVAL(cx, vp, JSVAL_VOID);
-        return JS_TRUE;
-    }
-    JS_ReportError(cx, "wrong number of arguments");
-    return JS_FALSE;
-}
-#endif
-#if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginReviewJS_PluginReview_setMessage(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     bool ok = true;
     if (argc == 1) {
         std::string arg0;
         ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle : Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptRateButtonTitle(arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setMessage : Error processing arguments");
+        sdkbox::PluginReview::setMessage(arg0);
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle : wrong number of arguments");
+    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setMessage : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
+JSBool js_PluginReviewJS_PluginReview_setMessage(JSContext *cx, uint32_t argc, jsval *vp)
 {
     jsval *argv = JS_ARGV(cx, vp);
     JSBool ok = JS_TRUE;
@@ -364,7 +331,7 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle(JSContext *
         std::string arg0;
         ok &= jsval_to_std_string(cx, argv[0], &arg0);
         JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
-        sdkbox::PluginReview::setCustomPromptRateButtonTitle(arg0);
+        sdkbox::PluginReview::setMessage(arg0);
         JS_SET_RVAL(cx, vp, JSVAL_VOID);
         return JS_TRUE;
     }
@@ -373,22 +340,31 @@ JSBool js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle(JSContext *
 }
 #endif
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginReviewJS_PluginReview_tryToShowPrompt(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginReviewJS_PluginReview_setCancelButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
-    if (argc == 0) {
-        sdkbox::PluginReview::tryToShowPrompt();
+    bool ok = true;
+    if (argc == 1) {
+        std::string arg0;
+        ok &= jsval_to_std_string(cx, args.get(0), &arg0);
+        JSB_PRECONDITION2(ok, cx, false, "js_PluginReviewJS_PluginReview_setCancelButtonTitle : Error processing arguments");
+        sdkbox::PluginReview::setCancelButtonTitle(arg0);
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_tryToShowPrompt : wrong number of arguments");
+    JS_ReportError(cx, "js_PluginReviewJS_PluginReview_setCancelButtonTitle : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
-JSBool js_PluginReviewJS_PluginReview_tryToShowPrompt(JSContext *cx, uint32_t argc, jsval *vp)
+JSBool js_PluginReviewJS_PluginReview_setCancelButtonTitle(JSContext *cx, uint32_t argc, jsval *vp)
 {
-    if (argc == 0) {
-        sdkbox::PluginReview::tryToShowPrompt();
+    jsval *argv = JS_ARGV(cx, vp);
+    JSBool ok = JS_TRUE;
+    if (argc == 1) {
+        std::string arg0;
+        ok &= jsval_to_std_string(cx, argv[0], &arg0);
+        JSB_PRECONDITION2(ok, cx, JS_FALSE, "Error processing arguments");
+        sdkbox::PluginReview::setCancelButtonTitle(arg0);
         JS_SET_RVAL(cx, vp, JSVAL_VOID);
         return JS_TRUE;
     }
@@ -440,14 +416,13 @@ void js_register_PluginReviewJS_PluginReview(JSContext *cx, JS::HandleObject glo
 
     static JSFunctionSpec st_funcs[] = {
         JS_FN("userDidSignificantEvent", js_PluginReviewJS_PluginReview_userDidSignificantEvent, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptTitle", js_PluginReviewJS_PluginReview_setCustomPromptTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptCancelButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptMessage", js_PluginReviewJS_PluginReview_setCustomPromptMessage, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setRateButtonTitle", js_PluginReviewJS_PluginReview_setRateButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("show", js_PluginReviewJS_PluginReview_show, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setTitle", js_PluginReviewJS_PluginReview_setTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("init", js_PluginReviewJS_PluginReview_init, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptRateLaterButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("forceToShowPrompt", js_PluginReviewJS_PluginReview_forceToShowPrompt, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptRateButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("tryToShowPrompt", js_PluginReviewJS_PluginReview_tryToShowPrompt, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setRateLaterButtonTitle", js_PluginReviewJS_PluginReview_setRateLaterButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setMessage", js_PluginReviewJS_PluginReview_setMessage, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setCancelButtonTitle", js_PluginReviewJS_PluginReview_setCancelButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FS_END
     };
 
@@ -503,14 +478,13 @@ void js_register_PluginReviewJS_PluginReview(JSContext *cx, JSObject *global) {
 
     static JSFunctionSpec st_funcs[] = {
         JS_FN("userDidSignificantEvent", js_PluginReviewJS_PluginReview_userDidSignificantEvent, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptTitle", js_PluginReviewJS_PluginReview_setCustomPromptTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptCancelButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptMessage", js_PluginReviewJS_PluginReview_setCustomPromptMessage, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setRateButtonTitle", js_PluginReviewJS_PluginReview_setRateButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("show", js_PluginReviewJS_PluginReview_show, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setTitle", js_PluginReviewJS_PluginReview_setTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("init", js_PluginReviewJS_PluginReview_init, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptRateLaterButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("forceToShowPrompt", js_PluginReviewJS_PluginReview_forceToShowPrompt, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptRateButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("tryToShowPrompt", js_PluginReviewJS_PluginReview_tryToShowPrompt, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setRateLaterButtonTitle", js_PluginReviewJS_PluginReview_setRateLaterButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setMessage", js_PluginReviewJS_PluginReview_setMessage, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setCancelButtonTitle", js_PluginReviewJS_PluginReview_setCancelButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FS_END
     };
 
@@ -562,14 +536,13 @@ void js_register_PluginReviewJS_PluginReview(JSContext *cx, JSObject *global) {
 
     static JSFunctionSpec st_funcs[] = {
         JS_FN("userDidSignificantEvent", js_PluginReviewJS_PluginReview_userDidSignificantEvent, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptTitle", js_PluginReviewJS_PluginReview_setCustomPromptTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptCancelButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptCancelButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptMessage", js_PluginReviewJS_PluginReview_setCustomPromptMessage, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setRateButtonTitle", js_PluginReviewJS_PluginReview_setRateButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("show", js_PluginReviewJS_PluginReview_show, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setTitle", js_PluginReviewJS_PluginReview_setTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("init", js_PluginReviewJS_PluginReview_init, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptRateLaterButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptRateLaterButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("forceToShowPrompt", js_PluginReviewJS_PluginReview_forceToShowPrompt, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("setCustomPromptRateButtonTitle", js_PluginReviewJS_PluginReview_setCustomPromptRateButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("tryToShowPrompt", js_PluginReviewJS_PluginReview_tryToShowPrompt, 0, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setRateLaterButtonTitle", js_PluginReviewJS_PluginReview_setRateLaterButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setMessage", js_PluginReviewJS_PluginReview_setMessage, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("setCancelButtonTitle", js_PluginReviewJS_PluginReview_setCancelButtonTitle, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FS_END
     };
 
