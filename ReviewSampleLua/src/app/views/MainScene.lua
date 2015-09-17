@@ -7,29 +7,8 @@ function MainScene:onCreate()
     --     :move(display.center)
     --     :addTo(self)
 
-    -- add HelloWorld label
-    cc.Label:createWithSystemFont("Review Lua Sample", "Arial", 40)
-        :move(display.cx, display.cy + 200)
-        :addTo(self)
-
-    local labelRate = cc.Label:createWithSystemFont("Rate The App", "Arial", 20)
-    local labelIncrease = cc.Label:createWithSystemFont("Increase The App", "Arial", 20)
-    local btnRate = cc.MenuItemLabel:create(labelRate)
-        :onClicked(function()
-            print("onClicked")
-            local plugin = sdkbox.PluginReview
-            plugin:show(true)
-        end)
-        :move(display.cx, display.cy + 50)
-    local btnIncreate = cc.MenuItemLabel:create(labelIncrease)
-        :onClicked(function()
-            print("onClicked")
-            local plugin = sdkbox.PluginReview
-            plugin:userDidSignificantEvent()
-        end)
+    local textLabel = cc.Label:createWithSystemFont("The rate prompt will show, when 3rd launch", "Arial", 20)
         :move(display.cx, display.cy)
-    local menu = cc.Menu:create(btnRate, btnIncreate)
-        :move(0, 0)
         :addTo(self, 1)
 
     self:initSDK()
