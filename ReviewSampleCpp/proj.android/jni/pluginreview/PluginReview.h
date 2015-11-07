@@ -4,8 +4,8 @@
 
  ****************************************************************************/
 
-#ifndef _PLUGIN_AGECHEQ_H_
-#define _PLUGIN_AGECHEQ_H_
+#ifndef _PLUGIN_REVIEW_H_
+#define _PLUGIN_REVIEW_H_
 
 #include <string>
 #include <vector>
