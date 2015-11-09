@@ -17,12 +17,12 @@
 		15A8A4881834C90F00142BE0 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A8A4871834C90E00142BE0 /* libcurl.dylib */; };
 		1AF4C403178663F200122817 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF4C402178663F200122817 /* libz.dylib */; };
 		2CB24104AF8899C3F705A956 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2646FA9D83850AF2CF1870 /* SystemConfiguration.framework */; };
-		306D45FBBC888118A63DEFDF /* PluginReviewLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C4E1EB05CFEBF025C654A /* PluginReviewLua.cpp */; };
-		3AE94B1CA1EF77A88CAA6B3C /* PluginReviewLuaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FF84F899C3B25153B7F7593 /* PluginReviewLuaHelper.cpp */; };
-		3BF44DDB9FDEC1A62648A71B /* PluginReviewLuaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FF84F899C3B25153B7F7593 /* PluginReviewLuaHelper.cpp */; };
 		3EEEDB61197107C0006A9FF8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEEDB60197107C0006A9FF8 /* MediaPlayer.framework */; };
 		4617494A90FC3A89E667D6F8 /* sdkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0B4281A8D839E490FC01CC /* sdkbox.framework */; };
 		493EAB4B1BA6BB3000BC4C58 /* SdkboxReviewResLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493EAB2A1BA6BB3000BC4C58 /* SdkboxReviewResLocalizable.strings */; };
+		494B26A51BF043970056A2F6 /* PluginReviewLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494B269F1BF043970056A2F6 /* PluginReviewLua.cpp */; settings = {ASSET_TAGS = (); }; };
+		494B26A61BF043970056A2F6 /* PluginReviewLuaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494B26A11BF043970056A2F6 /* PluginReviewLuaHelper.cpp */; settings = {ASSET_TAGS = (); }; };
+		494B26A71BF043970056A2F6 /* SDKBoxLuaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494B26A31BF043970056A2F6 /* SDKBoxLuaHelper.cpp */; settings = {ASSET_TAGS = (); }; };
 		4B4C47C981178CD7198BD402 /* sdkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0B4281A8D839E490FC01CC /* sdkbox.framework */; };
 		5023811817EBBCAC00990C9B /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5023810817EBBCAC00990C9B /* AppController.mm */; };
 		5023811917EBBCAC00990C9B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5023810917EBBCAC00990C9B /* Default-568h@2x.png */; };
@@ -59,11 +59,8 @@
 		521A8E7019F0C3D200D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6E19F0C3D200D177D7 /* Default-667h@2x.png */; };
 		521A8E7119F0C3D200D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6F19F0C3D200D177D7 /* Default-736h@3x.png */; };
 		5D564CE4902513EE804DE890 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01954235BE883DD4A915711C /* AdSupport.framework */; };
-		66654C03BCB5463F09AA1D2B /* SDKBoxLuaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2134D51AE6C4D4AC4E9E037 /* SDKBoxLuaHelper.cpp */; };
-		6F9F43E0A5E27DC989D99FC1 /* SDKBoxLuaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2134D51AE6C4D4AC4E9E037 /* SDKBoxLuaHelper.cpp */; };
 		785D4971BA56BCA1EA6D84FC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F94181AA7DD3800FF55848 /* StoreKit.framework */; };
 		89DB4FD7B895C86CB6525D32 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01954235BE883DD4A915711C /* AdSupport.framework */; };
-		9C794CE2800850C7F34EAF89 /* PluginReviewLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C4E1EB05CFEBF025C654A /* PluginReviewLua.cpp */; };
 		9FC760431A67791200D1E6E7 /* lang in Resources */ = {isa = PBXBuildFile; fileRef = 9FC760401A67791200D1E6E7 /* lang */; };
 		9FC760451A677A4A00D1E6E7 /* SimpleConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FC760411A67791200D1E6E7 /* SimpleConfigParser.cpp */; };
 		9FF504841A5E87B100AFDA55 /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF504811A5E87B100AFDA55 /* ConsoleWindow.xib */; };
@@ -189,13 +186,11 @@
 		01954235BE883DD4A915711C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		0A0B4281A8D839E490FC01CC /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdkbox.framework; sourceTree = "<group>"; };
 		0B574FE5A78AE02D33FA97C1 /* PluginReview.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PluginReview.framework; sourceTree = "<group>"; };
-		13B0482B8C0DBCA69E92B0D7 /* PluginReviewLua.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginReviewLua.hpp; path = "/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/Classes/PluginReviewLua.hpp"; sourceTree = "<absolute>"; };
 		15427CE2198F237300DC375D /* lua_module_register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua_module_register.h; path = ../Classes/lua_module_register.h; sourceTree = "<group>"; };
 		15A8A4031834BDA200142BE0 /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = "../../cocos2d-x/build/cocos2d_libs.xcodeproj"; sourceTree = "<group>"; };
 		15A8A4871834C90E00142BE0 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		15C1568D1683131500D239F2 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../cocos2d-x/cocos2dx/platform/third_party/ios/libraries/libcurl.a"; sourceTree = "<group>"; };
 		1AF4C402178663F200122817 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		3A3C4E1EB05CFEBF025C654A /* PluginReviewLua.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginReviewLua.cpp; path = "/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/Classes/PluginReviewLua.cpp"; sourceTree = "<absolute>"; };
 		3EB51526195187AF006966AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3EEEDB60197107C0006A9FF8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		493EAB2B1BA6BB3000BC4C58 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SdkboxReviewResLocalizable.strings; sourceTree = "<group>"; };
@@ -230,6 +225,12 @@
 		493EAB481BA6BB3000BC4C58 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SdkboxReviewResLocalizable.strings; sourceTree = "<group>"; };
 		493EAB491BA6BB3000BC4C58 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SdkboxReviewResLocalizable.strings"; sourceTree = "<group>"; };
 		493EAB4A1BA6BB3000BC4C58 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SdkboxReviewResLocalizable.strings"; sourceTree = "<group>"; };
+		494B269F1BF043970056A2F6 /* PluginReviewLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginReviewLua.cpp; path = ../Classes/PluginReviewLua.cpp; sourceTree = "<group>"; };
+		494B26A01BF043970056A2F6 /* PluginReviewLua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PluginReviewLua.hpp; path = ../Classes/PluginReviewLua.hpp; sourceTree = "<group>"; };
+		494B26A11BF043970056A2F6 /* PluginReviewLuaHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginReviewLuaHelper.cpp; path = ../Classes/PluginReviewLuaHelper.cpp; sourceTree = "<group>"; };
+		494B26A21BF043970056A2F6 /* PluginReviewLuaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PluginReviewLuaHelper.h; path = ../Classes/PluginReviewLuaHelper.h; sourceTree = "<group>"; };
+		494B26A31BF043970056A2F6 /* SDKBoxLuaHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SDKBoxLuaHelper.cpp; path = ../Classes/SDKBoxLuaHelper.cpp; sourceTree = "<group>"; };
+		494B26A41BF043970056A2F6 /* SDKBoxLuaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKBoxLuaHelper.h; path = ../Classes/SDKBoxLuaHelper.h; sourceTree = "<group>"; };
 		5023810717EBBCAC00990C9B /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		5023810817EBBCAC00990C9B /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
 		5023810917EBBCAC00990C9B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -265,9 +266,7 @@
 		5200BEC91A53D9A500AC45E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		521A8E6E19F0C3D200D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6F19F0C3D200D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		6FF84F899C3B25153B7F7593 /* PluginReviewLuaHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginReviewLuaHelper.cpp; path = "/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/Classes/PluginReviewLuaHelper.cpp"; sourceTree = "<absolute>"; };
 		7A2646FA9D83850AF2CF1870 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		80E8466AA919B9ABB1F6CD42 /* SDKBoxLuaHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDKBoxLuaHelper.h; path = "/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/Classes/SDKBoxLuaHelper.h"; sourceTree = "<absolute>"; };
 		9FC7603F1A67791200D1E6E7 /* CodeIDESupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeIDESupport.h; sourceTree = "<group>"; };
 		9FC760401A67791200D1E6E7 /* lang */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lang; sourceTree = "<group>"; };
 		9FC760411A67791200D1E6E7 /* SimpleConfigParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleConfigParser.cpp; sourceTree = "<group>"; };
@@ -292,8 +291,6 @@
 		C07828F718B4D72E00BD2287 /* SimulatorApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimulatorApp.mm; sourceTree = "<group>"; };
 		D6B061341803AC000077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		DA9E7D871AB1ABCC004B27C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		DE6547848DA94E035CA46C29 /* PluginReviewLuaHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginReviewLuaHelper.h; path = "/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/Classes/PluginReviewLuaHelper.h"; sourceTree = "<absolute>"; };
-		E2134D51AE6C4D4AC4E9E037 /* SDKBoxLuaHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SDKBoxLuaHelper.cpp; path = "/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/Classes/SDKBoxLuaHelper.cpp"; sourceTree = "<absolute>"; };
 		ED545A881B68A23E00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A8A1B68A24500C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		F293B3C815EB7BE500256477 /* ReviewSampleLua-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReviewSampleLua-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -543,12 +540,12 @@
 				15427CE2198F237300DC375D /* lua_module_register.h */,
 				F293BB7E15EB831F00256477 /* AppDelegate.cpp */,
 				F293BB7F15EB831F00256477 /* AppDelegate.h */,
-				13B0482B8C0DBCA69E92B0D7 /* PluginReviewLua.hpp */,
-				3A3C4E1EB05CFEBF025C654A /* PluginReviewLua.cpp */,
-				DE6547848DA94E035CA46C29 /* PluginReviewLuaHelper.h */,
-				6FF84F899C3B25153B7F7593 /* PluginReviewLuaHelper.cpp */,
-				80E8466AA919B9ABB1F6CD42 /* SDKBoxLuaHelper.h */,
-				E2134D51AE6C4D4AC4E9E037 /* SDKBoxLuaHelper.cpp */,
+				494B269F1BF043970056A2F6 /* PluginReviewLua.cpp */,
+				494B26A01BF043970056A2F6 /* PluginReviewLua.hpp */,
+				494B26A11BF043970056A2F6 /* PluginReviewLuaHelper.cpp */,
+				494B26A21BF043970056A2F6 /* PluginReviewLuaHelper.h */,
+				494B26A31BF043970056A2F6 /* SDKBoxLuaHelper.cpp */,
+				494B26A41BF043970056A2F6 /* SDKBoxLuaHelper.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -799,9 +796,6 @@
 				9FF504851A5E87B100AFDA55 /* ConsoleWindowController.m in Sources */,
 				C07828F818B4D72E00BD2287 /* main.m in Sources */,
 				9FFE00A21ACCF59E00D6E35A /* RuntimeLuaImpl.cpp in Sources */,
-				9C794CE2800850C7F34EAF89 /* PluginReviewLua.cpp in Sources */,
-				3BF44DDB9FDEC1A62648A71B /* PluginReviewLuaHelper.cpp in Sources */,
-				66654C03BCB5463F09AA1D2B /* SDKBoxLuaHelper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,13 +806,13 @@
 				9FC760451A677A4A00D1E6E7 /* SimpleConfigParser.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
+				494B26A71BF043970056A2F6 /* SDKBoxLuaHelper.cpp in Sources */,
 				9FFE009F1ACCF59E00D6E35A /* lua_debugger.c in Sources */,
+				494B26A61BF043970056A2F6 /* PluginReviewLuaHelper.cpp in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
 				9FFE00A11ACCF59E00D6E35A /* RuntimeLuaImpl.cpp in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
-				306D45FBBC888118A63DEFDF /* PluginReviewLua.cpp in Sources */,
-				3AE94B1CA1EF77A88CAA6B3C /* PluginReviewLuaHelper.cpp in Sources */,
-				6F9F43E0A5E27DC989D99FC1 /* SDKBoxLuaHelper.cpp in Sources */,
+				494B26A51BF043970056A2F6 /* PluginReviewLua.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
