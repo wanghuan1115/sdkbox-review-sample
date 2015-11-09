@@ -920,7 +920,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../../../runtime/mac;
-				FRAMEWORK_SEARCH_PATHS = "\"/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/proj.ios_mac/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;
@@ -960,7 +960,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/proj.ios_mac/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -999,7 +999,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/proj.ios_mac/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1029,7 +1029,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				FRAMEWORK_SEARCH_PATHS = "\"/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/proj.ios_mac/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -1057,7 +1057,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/proj.ios_mac/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -1101,7 +1101,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"/Users/htl/Documents/Work/sdkbox-review-sample/ReviewSampleLua/frameworks/runtime-src/proj.ios_mac/\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
