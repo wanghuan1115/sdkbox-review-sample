@@ -1,4 +1,4 @@
-#include "PluginReviewJSHelper.hpp"
+#include "PluginReviewJSHelper.h"
 #include "cocos2d_specifics.hpp"
 #include "PluginReview/PluginReview.h"
 #include "SDKBoxJSHelper.h"

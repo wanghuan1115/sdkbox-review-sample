@@ -2,6 +2,7 @@
 #include "PluginReview/PluginReview.h"
 #include "tolua_fix.h"
 #include "SDKBoxLuaHelper.h"
+#include "sdkbox/sdkbox.h"
 
 
 
@@ -338,6 +339,8 @@ TOLUA_API int register_all_PluginReviewLua(lua_State* tolua_S)
 	lua_register_PluginReviewLua_PluginReview(tolua_S);
 
 	tolua_endmodule(tolua_S);
+
+	sdkbox::setProjectType("lua");
 	return 1;
 }
 

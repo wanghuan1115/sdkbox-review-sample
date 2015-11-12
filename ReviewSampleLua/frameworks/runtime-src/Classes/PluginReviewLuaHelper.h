@@ -1,6 +1,6 @@
 
-#ifndef __PLUGIN_AGECHEQ_LUA_HELPER_H__
-#define __PLUGIN_AGECHEQ_LUA_HELPER_H__
+#ifndef __PLUGIN_REVIEW_LUA_HELPER_H__
+#define __PLUGIN_REVIEW_LUA_HELPER_H__
 
 #ifdef __cplusplus
 extern "C" {
