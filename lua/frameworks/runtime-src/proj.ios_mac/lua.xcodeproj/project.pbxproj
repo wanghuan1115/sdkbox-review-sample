@@ -96,21 +96,30 @@
 		0B374C4DBD498BFE275A6D5B /* es */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = es; path = plugin_review_res_bundle/es.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		0D534C46B438EA3CC22B4497 /* da */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = da; path = plugin_review_res_bundle/da.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		10854E9C9CCDB08F5176BA2D /* PluginReviewLua.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginReviewLua.cpp; path = ../Classes/PluginReviewLua.cpp; sourceTree = SOURCE_ROOT; };
+		15344CA4AD8C7F451A15291C /* fr */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = fr; path = plugin_review_res_bundle/fr.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		15427CE2198F237300DC375D /* lua_module_register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua_module_register.h; path = ../Classes/lua_module_register.h; sourceTree = "<group>"; };
+		154749A08D6BED83E020E3D8 /* vi */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = vi; path = plugin_review_res_bundle/vi.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		15A8A4871834C90E00142BE0 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = compiled.mach-o.dylib; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		15C1568D1683131500D239F2 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2d-x/cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1644476CB7F56E74A5D269A1 /* ca */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ca; path = plugin_review_res_bundle/ca.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		17F44040872E1B607B0EEAFA /* ar */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ar; path = plugin_review_res_bundle/ar.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		18F94262B37FD68A6CE33C3D /* ms */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ms; path = plugin_review_res_bundle/ms.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		192977151BB236650002DFFC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		1AF4C402178663F200122817 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = compiled.mach-o.dylib; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1B8F46429BA8E823EA3D50D3 /* th */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = th; path = plugin_review_res_bundle/th.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		1BB248398E460ED48F155980 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = zh-Hant; path = plugin_review_res_bundle/zh-Hant.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		21FB43CF9EE43E5693C9C5B2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = tr; path = plugin_review_res_bundle/tr.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		24A941FBB9DEC32EC11EF7A5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ja; path = plugin_review_res_bundle/ja.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		28B74A0DBD910E39E69E5587 /* uk */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = uk; path = plugin_review_res_bundle/uk.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		29144AF7A0F9B30763A01AFE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = pt-BR; path = plugin_review_res_bundle/pt-BR.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		2CFF4DC59FBF27529A48E925 /* sv */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = sv; path = plugin_review_res_bundle/sv.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		37D54E11A293AECAE5A0C5D0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = pt-BR; path = plugin_review_res_bundle/pt-BR.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		391A453B87C458113FED8D26 /* PluginReview.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginReview.framework; path = PluginReview.framework; sourceTree = SOURCE_ROOT; };
 		3B0147378F58D03253080E46 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		3EEEDB60197107C0006A9FF8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		403F45E3B7557277948069FB /* libluacocos2d Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libluacocos2d Mac.a"; path = "../../../../cocos2d-x-3.6-lib/prebuilt/mac/libluacocos2d Mac.a"; sourceTree = "<absolute>"; };
+		4316487B803C033F44CAFDA8 /* cs */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = cs; path = plugin_review_res_bundle/cs.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		44C74A4689E39F773DC01587 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = zh-Hant; path = plugin_review_res_bundle/zh-Hant.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		477243AEB007736D3CDA0AF8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		4AE7405A802073256150B232 /* ro */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ro; path = plugin_review_res_bundle/ro.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		4CF140B38C62A1E1204929CA /* tr */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = tr; path = plugin_review_res_bundle/tr.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
@@ -147,22 +156,35 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		511343E1A54105985877CF75 /* sk */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = sk; path = plugin_review_res_bundle/sk.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		5200BEC91A53D9A500AC45E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		521A8E6E19F0C3D200D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6F19F0C3D200D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		5516415FAABBC883CF67EAA3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = vi; path = plugin_review_res_bundle/vi.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		5599473FAB09367DC44B3C2C /* libsimulator Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsimulator Mac.a"; path = "../../../../cocos2d-x-3.6-lib/prebuilt/mac/libsimulator Mac.a"; sourceTree = "<absolute>"; };
 		584941CEB48A3A14D477A3EB /* libsimulator iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsimulator iOS.a"; path = "../../../../cocos2d-x-3.6-lib/prebuilt/ios/libsimulator iOS.a"; sourceTree = "<absolute>"; };
+		59224C80850B3B13086695AB /* ko */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ko; path = plugin_review_res_bundle/ko.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		5A4C4AE5AC5A247EC18A5DD6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ru; path = plugin_review_res_bundle/ru.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		5B8F48E0AECC54CFB3D2C25B /* nl */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = nl; path = plugin_review_res_bundle/nl.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		608E4B6BA4FE4B5E65020061 /* ca */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ca; path = plugin_review_res_bundle/ca.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		60D14A35AB8B81527A5ED2A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = it; path = plugin_review_res_bundle/it.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		61ED42EAABE34251A82BFACA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = zh-Hans; path = plugin_review_res_bundle/zh-Hans.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		630C48F28383E6F72F25EC30 /* pl */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = pl; path = plugin_review_res_bundle/pl.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		66624C8AB80DC0A87982091B /* de */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = de; path = plugin_review_res_bundle/de.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		6A6B495989B75553C243E101 /* ms */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ms; path = plugin_review_res_bundle/ms.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		6D5148BAA2CCA90DF0426193 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = zh-Hans; path = plugin_review_res_bundle/zh-Hans.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		738B4CCBAB946FE3706BB113 /* uk */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = uk; path = plugin_review_res_bundle/uk.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		764442D9BFFB5B6DE7E669C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = en; path = plugin_review_res_bundle/en.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		7837422286A6F2E40BB8944B /* ar */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ar; path = plugin_review_res_bundle/ar.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		7915407F882406F9770BC794 /* es */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = es; path = plugin_review_res_bundle/es.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		83A44276AB95357254B535F2 /* id */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = id; path = plugin_review_res_bundle/id.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		85FB44089DBC2BB5D2851B0F /* PluginReviewLua.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginReviewLua.hpp; path = ../Classes/PluginReviewLua.hpp; sourceTree = SOURCE_ROOT; };
 		87EB60261A7271B60085F57C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConsoleWindow.xib; sourceTree = "<group>"; };
 		87EB60281A7271C60085F57C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh-Hans; path = zh-Hans.lproj/ConsoleWindow.strings; sourceTree = "<group>"; };
+		8B214F359AF3F56090FA3FA9 /* fi */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = fi; path = plugin_review_res_bundle/fi.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		8B93458585B61C57C83A8F81 /* pt */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = pt; path = plugin_review_res_bundle/pt.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		94CD4B6AA2026E9DD137D395 /* he */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = he; path = plugin_review_res_bundle/he.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		984741AAAD3E21F22BB5E1E9 /* nb */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = nb; path = plugin_review_res_bundle/nb.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		9FB6C0691A69863D00945236 /* lua_debugger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_debugger.c; sourceTree = "<group>"; };
 		9FB6C06A1A69863D00945236 /* lua_debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_debugger.h; sourceTree = "<group>"; };
 		9FB6C06B1A69863D00945236 /* RuntimeLuaImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeLuaImpl.cpp; sourceTree = "<group>"; };
@@ -175,9 +197,12 @@
 		9FF504831A5E87B100AFDA55 /* ConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleWindowController.m; sourceTree = "<group>"; };
 		9FFC07351A4A764100AED399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9FFC07371A4A765100AED399 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh-Hans; path = zh-Hans.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AC5847B081D8C36423D473DC /* pt */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = pt; path = plugin_review_res_bundle/pt.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		B41F487FB4D94E10E1D78FDE /* cs */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = cs; path = plugin_review_res_bundle/cs.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		B5EF43F18EFFD90C12559668 /* ko */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ko; path = plugin_review_res_bundle/ko.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		B6E949ADAF6CEA187EDC41BA /* ro */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ro; path = plugin_review_res_bundle/ro.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		B8C147C1AFAB3927B2582774 /* libluacocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libluacocos2d iOS.a"; path = "../../../../cocos2d-x-3.6-lib/prebuilt/ios/libluacocos2d iOS.a"; sourceTree = "<absolute>"; };
+		B91F4819B6B83AC6CA475E95 /* sv */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = sv; path = plugin_review_res_bundle/sv.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		B9D8477899933F2AC703520B /* libcocos2d Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d Mac.a"; path = "../../../../cocos2d-x-3.6-lib/prebuilt/mac/libcocos2d Mac.a"; sourceTree = "<absolute>"; };
 		C03781B718BF655400FE4F13 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = ../../../res; sourceTree = "<group>"; };
 		C03781B818BF655400FE4F13 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../src; sourceTree = "<group>"; };
@@ -186,15 +211,20 @@
 		C07828F618B4D72E00BD2287 /* SimulatorApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorApp.h; sourceTree = "<group>"; };
 		C07828F718B4D72E00BD2287 /* SimulatorApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimulatorApp.mm; sourceTree = "<group>"; };
 		C0E44C2D8BF99293D7B7C460 /* fi */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = fi; path = plugin_review_res_bundle/fi.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		C46640DFB7383654F9B0C66F /* ru */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ru; path = plugin_review_res_bundle/ru.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		C541447A9AE32C4FE4006750 /* PluginReviewLuaHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginReviewLuaHelper.h; path = ../Classes/PluginReviewLuaHelper.h; sourceTree = SOURCE_ROOT; };
 		C6E343389020C78657343CCB /* id */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = id; path = plugin_review_res_bundle/id.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		C7D04E7B8682B627E42FBC6E /* ja */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = ja; path = plugin_review_res_bundle/ja.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		CAB74EF3BA4BB5B68037D4EA /* en */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = en; path = plugin_review_res_bundle/en.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		CD98450994D3393BD4094B85 /* th */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = th; path = plugin_review_res_bundle/th.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		D1F14480827FCC73706169B9 /* it */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = it; path = plugin_review_res_bundle/it.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		D6B061341803AC000077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		DBA14359A4EF386D86B99FEE /* de */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = de; path = plugin_review_res_bundle/de.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		DF224DE68F2F68E3E8141ACD /* sk */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = sk; path = plugin_review_res_bundle/sk.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		E6A04D4892E65831C2F7BFF2 /* nl */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = nl; path = plugin_review_res_bundle/nl.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		E7FB4A0884E828366E337B56 /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sdkbox.framework; path = sdkbox.framework; sourceTree = SOURCE_ROOT; };
 		E8B34E56B55168732319FE5E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		EA304154AEA9171D7AEE3F13 /* hu */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = hu; path = plugin_review_res_bundle/hu.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		F19E47E19D62823222F34317 /* SDKBoxLuaHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SDKBoxLuaHelper.cpp; path = ../Classes/SDKBoxLuaHelper.cpp; sourceTree = SOURCE_ROOT; };
 		F293B3C815EB7BE500256477 /* lua iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lua iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F293B3CC15EB7BE500256477 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -209,7 +239,9 @@
 		F293BB7F15EB831F00256477 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
 		F3AC4005BB6F84FD1023FD20 /* he */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = he; path = plugin_review_res_bundle/he.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		F6A242F8B38D453941ACEBD5 /* el */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = el; path = plugin_review_res_bundle/el.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		F8554E1B88B99C3D1583DC91 /* el */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = el; path = plugin_review_res_bundle/el.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		FB3149978256B69E6EB23A96 /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "../../../../cocos2d-x-3.6-lib/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
+		FB67449D9F67817CAAED4342 /* da */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = da; path = plugin_review_res_bundle/da.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		FCFA4DB68FF5E363C6EFE9E6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = pl; path = plugin_review_res_bundle/pl.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -503,7 +535,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F293B3C215EB7BE500256477 /* Build configuration list for PBXProject "Unity-iPhone" */;
+			buildConfigurationList = F293B3C215EB7BE500256477 /* Build configuration list for PBXNativeTarget "TARGET_NAME" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -834,7 +866,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F293B3C215EB7BE500256477 /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+		F293B3C215EB7BE500256477 /* Build configuration list for PBXNativeTarget "TARGET_NAME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F293B6C215EB7BEA00256477 /* Debug */,
@@ -906,6 +938,38 @@
 				5516415FAABBC883CF67EAA3 /* vi */,
 				6D5148BAA2CCA90DF0426193 /* zh-Hans */,
 				1BB248398E460ED48F155980 /* zh-Hant */,
+				17F44040872E1B607B0EEAFA /* ar */,
+				608E4B6BA4FE4B5E65020061 /* ca */,
+				4316487B803C033F44CAFDA8 /* cs */,
+				FB67449D9F67817CAAED4342 /* da */,
+				DBA14359A4EF386D86B99FEE /* de */,
+				F8554E1B88B99C3D1583DC91 /* el */,
+				CAB74EF3BA4BB5B68037D4EA /* en */,
+				7915407F882406F9770BC794 /* es */,
+				8B214F359AF3F56090FA3FA9 /* fi */,
+				15344CA4AD8C7F451A15291C /* fr */,
+				94CD4B6AA2026E9DD137D395 /* he */,
+				EA304154AEA9171D7AEE3F13 /* hu */,
+				83A44276AB95357254B535F2 /* id */,
+				60D14A35AB8B81527A5ED2A7 /* it */,
+				C7D04E7B8682B627E42FBC6E /* ja */,
+				59224C80850B3B13086695AB /* ko */,
+				6A6B495989B75553C243E101 /* ms */,
+				984741AAAD3E21F22BB5E1E9 /* nb */,
+				5B8F48E0AECC54CFB3D2C25B /* nl */,
+				630C48F28383E6F72F25EC30 /* pl */,
+				29144AF7A0F9B30763A01AFE /* pt-BR */,
+				AC5847B081D8C36423D473DC /* pt */,
+				B6E949ADAF6CEA187EDC41BA /* ro */,
+				C46640DFB7383654F9B0C66F /* ru */,
+				511343E1A54105985877CF75 /* sk */,
+				B91F4819B6B83AC6CA475E95 /* sv */,
+				1B8F46429BA8E823EA3D50D3 /* th */,
+				21FB43CF9EE43E5693C9C5B2 /* tr */,
+				28B74A0DBD910E39E69E5587 /* uk */,
+				154749A08D6BED83E020E3D8 /* vi */,
+				61ED42EAABE34251A82BFACA /* zh-Hans */,
+				44C74A4689E39F773DC01587 /* zh-Hant */,
 			);
 			name = SdkboxReviewResLocalizable.strings;
 			sourceTree = "<group>";
